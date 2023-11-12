@@ -1,0 +1,10 @@
+#! /bin/bash
+
+# This is my first Bash script
+echo "Enter your name: "
+read name
+
+echo "Enter Interest: "
+read interest
+
+echo "Your name is $name and you have an interest in $interest. Happy Hacking!!"
