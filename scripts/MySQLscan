@@ -1,2 +1,4 @@
-# Nmap 7.80 scan initiated Sat Dec 16 23:27:45 2023 as: nmap -sT -p 5432 -oG MySQLscan 192.168.100.255
-# Nmap done at Sat Dec 16 23:27:45 2023 -- 0 IP addresses (0 hosts up) scanned in 0.17 seconds
+# Nmap 7.80 scan initiated Sat Dec 16 23:58:16 2023 as: nmap -sT -p 5432 -oG MySQLscan 127.0.0.1
+Host: 127.0.0.1 (localhost)	Status: Up
+Host: 127.0.0.1 (localhost)	Ports: 5432/open/tcp//postgresql///
+# Nmap done at Sat Dec 16 23:58:16 2023 -- 1 IP address (1 host up) scanned in 0.25 seconds

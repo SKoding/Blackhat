@@ -1,0 +1,22 @@
+#! /bin/bash
+
+# Advanced scripting to prompt user to do a nmap scan
+
+echo "Enter start IP address: "
+
+read ipadd
+
+echo "Enter last oclet of IP address"
+
+read last
+
+echo "Enter first port to scan: "
+
+read prt
+
+nmap -sT $ipadd-$last -p $prt >/dev/null -oG Myportscan
+
+cat Myportscan | grep open > Myportscan2
+
+cat Myportscan2
+

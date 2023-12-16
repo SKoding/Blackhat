@@ -243,3 +243,8 @@ __Port scanner__
     nmap -sT 192.168.181.0/24 -p 3306 >/dev/null -oG MySQLscan
     cat MySQLscan | grep open > MySQLscan2
     cat MySQLscan2
+
+__Note__
+
+    Folder ./scripts contain scripts to train.  
+    > ./scripts/advscript is a script to read ipaddress and desired port to scan by nmap. 
