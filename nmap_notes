@@ -1,0 +1,602 @@
+Starting Nmap 7.80 ( https://nmap.org ) at 2023-11-12 17:09 EAT
+Nmap scan report for 102.215.40.188
+Host is up (0.021s latency).
+Not shown: 997 filtered ports
+PORT     STATE  SERVICE             VERSION
+113/tcp  closed ident
+443/tcp  open   ssl/http            Microsoft IIS httpd 10.0
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/10.0
+|_http-title: KPLC GIS SERVER
+| ssl-cert: Subject: commonName=*.kplc.co.ke
+| Subject Alternative Name: DNS:*.kplc.co.ke, DNS:kplc.co.ke
+| Not valid before: 2022-12-06T00:00:00
+|_Not valid after:  2023-12-06T23:59:59
+|_ssl-date: 2023-11-12T14:08:56+00:00; -1m00s from scanner time.
+| tls-alpn: 
+|_  http/1.1
+7443/tcp open   ssl/oracleas-https?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 400 
+|     Content-Length: 0
+|     Date: Sun, 12 Nov 2023 14:08:36 GMT
+|     Connection: close
+|     Server:
+|   HTTPOptions: 
+|     HTTP/1.1 302 
+|     Cache-Control: private
+|     Vary: Origin
+|     Access-Control-Allow-Origin: *
+|     Location: https://gis.kplc.co.ke/portal/home
+|     Content-Length: 0
+|     Date: Sun, 12 Nov 2023 14:08:36 GMT
+|     Connection: close
+|     Server:
+|   Kerberos, SMBProgNeg: 
+|     HTTP/1.1 400 
+|     Content-Length: 0
+|     Date: Sun, 12 Nov 2023 14:08:37 GMT
+|     Connection: close
+|_    Server:
+| ssl-cert: Subject: commonName=*.kplc.co.ke
+| Subject Alternative Name: DNS:*.kplc.co.ke, DNS:kplc.co.ke
+| Not valid before: 2022-12-06T00:00:00
+|_Not valid after:  2023-12-06T23:59:59
+|_ssl-date: TLS randomness does not represent time
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port7443-TCP:V=7.80%T=SSL%I=7%D=11/12%Time=6550DC9F%P=x86_64-pc-linux-g
+SF:nu%r(HTTPOptions,DB,"HTTP/1\.1\x20302\x20\r\nCache-Control:\x20private\
+SF:r\nVary:\x20Origin\r\nAccess-Control-Allow-Origin:\x20\*\r\nLocation:\x
+SF:20https://gis\.kplc\.co\.ke/portal/home\r\nContent-Length:\x200\r\nDate
+SF::\x20Sun,\x2012\x20Nov\x202023\x2014:08:36\x20GMT\r\nConnection:\x20clo
+SF:se\r\nServer:\x20\x20\r\n\r\n")%r(RTSPRequest,67,"HTTP/1\.1\x20400\x20\
+SF:r\nContent-Length:\x200\r\nDate:\x20Sun,\x2012\x20Nov\x202023\x2014:08:
+SF:36\x20GMT\r\nConnection:\x20close\r\nServer:\x20\x20\r\n\r\n")%r(RPCChe
+SF:ck,67,"HTTP/1\.1\x20400\x20\r\nContent-Length:\x200\r\nDate:\x20Sun,\x2
+SF:012\x20Nov\x202023\x2014:08:36\x20GMT\r\nConnection:\x20close\r\nServer
+SF::\x20\x20\r\n\r\n")%r(DNSVersionBindReqTCP,67,"HTTP/1\.1\x20400\x20\r\n
+SF:Content-Length:\x200\r\nDate:\x20Sun,\x2012\x20Nov\x202023\x2014:08:36\
+SF:x20GMT\r\nConnection:\x20close\r\nServer:\x20\x20\r\n\r\n")%r(DNSStatus
+SF:RequestTCP,67,"HTTP/1\.1\x20400\x20\r\nContent-Length:\x200\r\nDate:\x2
+SF:0Sun,\x2012\x20Nov\x202023\x2014:08:36\x20GMT\r\nConnection:\x20close\r
+SF:\nServer:\x20\x20\r\n\r\n")%r(Help,67,"HTTP/1\.1\x20400\x20\r\nContent-
+SF:Length:\x200\r\nDate:\x20Sun,\x2012\x20Nov\x202023\x2014:08:36\x20GMT\r
+SF:\nConnection:\x20close\r\nServer:\x20\x20\r\n\r\n")%r(SSLSessionReq,67,
+SF:"HTTP/1\.1\x20400\x20\r\nContent-Length:\x200\r\nDate:\x20Sun,\x2012\x2
+SF:0Nov\x202023\x2014:08:36\x20GMT\r\nConnection:\x20close\r\nServer:\x20\
+SF:x20\r\n\r\n")%r(TerminalServerCookie,67,"HTTP/1\.1\x20400\x20\r\nConten
+SF:t-Length:\x200\r\nDate:\x20Sun,\x2012\x20Nov\x202023\x2014:08:36\x20GMT
+SF:\r\nConnection:\x20close\r\nServer:\x20\x20\r\n\r\n")%r(TLSSessionReq,6
+SF:7,"HTTP/1\.1\x20400\x20\r\nContent-Length:\x200\r\nDate:\x20Sun,\x2012\
+SF:x20Nov\x202023\x2014:08:36\x20GMT\r\nConnection:\x20close\r\nServer:\x2
+SF:0\x20\r\n\r\n")%r(Kerberos,67,"HTTP/1\.1\x20400\x20\r\nContent-Length:\
+SF:x200\r\nDate:\x20Sun,\x2012\x20Nov\x202023\x2014:08:37\x20GMT\r\nConnec
+SF:tion:\x20close\r\nServer:\x20\x20\r\n\r\n")%r(SMBProgNeg,67,"HTTP/1\.1\
+SF:x20400\x20\r\nContent-Length:\x200\r\nDate:\x20Sun,\x2012\x20Nov\x20202
+SF:3\x2014:08:37\x20GMT\r\nConnection:\x20close\r\nServer:\x20\x20\r\n\r\n
+SF:");
+Device type: specialized
+Running (JUST GUESSING): AVtech embedded (89%)
+Aggressive OS guesses: AVtech Room Alert 26W environmental monitor (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 10 hops
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: -1m00s
+
+TRACEROUTE (using port 113/tcp)
+HOP RTT      ADDRESS
+1   22.21 ms _gateway (192.168.1.1)
+2   15.08 ms 192.168.0.1
+3   27.28 ms 196.200.34.1.wananchi.com (196.200.34.1)
+4   34.27 ms 89.2.212.41.in-addr.arpa (41.212.2.89)
+5   25.24 ms 97.5.212.41.in-addr.arpa (41.212.5.97)
+6   35.05 ms 196.223.21.214
+7   36.62 ms 10.100.14.37
+8   ...
+9   27.27 ms 102.215.40.2
+10  26.86 ms 102.215.40.188
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 45.04 seconds
+Segmentation fault
+
+
+
+$ sudo nmap --script targets-traceroute --script-args newtargets --traceroute 102.215.40.188
+[sudo] password for smug: 
+Starting Nmap 7.80 ( https://nmap.org ) at 2023-11-12 19:08 EAT
+Nmap scan report for 102.215.40.188
+Host is up (0.018s latency).
+Not shown: 997 filtered ports
+PORT     STATE  SERVICE
+113/tcp  closed ident
+443/tcp  open   https
+7443/tcp open   oracleas-https
+
+Host script results:
+|_targets-traceroute: successfully added 8 new targets.
+
+TRACEROUTE (using port 113/tcp)
+HOP RTT       ADDRESS
+1   6.73 ms   _gateway (192.168.1.1)
+2   122.42 ms 192.168.0.1
+3   53.41 ms  196.200.34.1.wananchi.com (196.200.34.1)
+4   27.65 ms  89.2.212.41.in-addr.arpa (41.212.2.89)
+5   26.83 ms  97.5.212.41.in-addr.arpa (41.212.5.97)
+6   28.60 ms  196.223.21.214
+7   29.15 ms  10.100.14.37
+8   ...
+9   28.32 ms  102.215.40.2
+10  22.12 ms  102.215.40.188
+
+Nmap scan report for _gateway (192.168.1.1)
+Host is up (0.019s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE
+80/tcp open  http
+MAC Address: 50:0F:F5:DF:8C:A0 (Tenda Technology,Ltd.Dongguan branch)
+
+TRACEROUTE
+HOP RTT      ADDRESS
+1   18.81 ms _gateway (192.168.1.1)
+
+Nmap scan report for 192.168.0.1
+Host is up (0.0056s latency).
+Not shown: 996 filtered ports
+PORT     STATE  SERVICE
+23/tcp   open   telnet
+80/tcp   open   http
+1900/tcp open   upnp
+8080/tcp closed http-proxy
+
+Host script results:
+|_targets-traceroute: successfully added 1 new targets.
+
+TRACEROUTE (using port 8080/tcp)
+HOP RTT ADDRESS
+-   Hops 1-2 are the same as for 102.215.40.188
+
+Nmap scan report for 196.200.34.1.wananchi.com (196.200.34.1)
+Host is up (0.037s latency).
+Not shown: 978 closed ports
+PORT      STATE    SERVICE
+22/tcp    filtered ssh
+23/tcp    filtered telnet
+37/tcp    open     time
+111/tcp   filtered rpcbind
+179/tcp   filtered bgp
+458/tcp   filtered appleqtc
+544/tcp   filtered kshell
+545/tcp   filtered ekshell
+666/tcp   filtered doom
+787/tcp   filtered qsc
+1106/tcp  filtered isoipsigport-1
+1147/tcp  filtered capioverlan
+2126/tcp  filtered pktcable-cops
+3809/tcp  filtered apocd
+3918/tcp  filtered pktcablemmcops
+5061/tcp  filtered sip-tls
+10778/tcp filtered unknown
+20222/tcp filtered ipulse-ics
+24800/tcp filtered unknown
+32777/tcp filtered sometimes-rpc17
+56738/tcp filtered unknown
+65000/tcp filtered unknown
+
+Host script results:
+|_targets-traceroute: successfully added 2 new targets.
+
+TRACEROUTE (using port 256/tcp)
+HOP RTT       ADDRESS
+-   Hops 1-2 are the same as for 102.215.40.188
+3   120.25 ms 196.200.34.1.wananchi.com (196.200.34.1)
+
+Nmap scan report for 89.2.212.41.in-addr.arpa (41.212.2.89)
+Host is up (0.021s latency).
+Not shown: 993 closed ports
+PORT      STATE    SERVICE
+22/tcp    open     ssh
+23/tcp    open     telnet
+2260/tcp  filtered apc-2260
+3784/tcp  filtered bfd-control
+7007/tcp  filtered afs3-bos
+16000/tcp filtered fmsas
+32769/tcp filtered filenet-rpc
+
+Host script results:
+|_targets-traceroute: successfully added 3 new targets.
+
+TRACEROUTE (using port 256/tcp)
+HOP RTT ADDRESS
+-   Hops 1-4 are the same as for 102.215.40.188
+
+Nmap scan report for 97.5.212.41.in-addr.arpa (41.212.5.97)
+Host is up (0.020s latency).
+All 1000 scanned ports on 97.5.212.41.in-addr.arpa (41.212.5.97) are filtered
+
+Host script results:
+|_targets-traceroute: successfully added 4 new targets.
+
+TRACEROUTE (using port 443/tcp)
+HOP RTT ADDRESS
+-   Hops 1-5 are the same as for 102.215.40.188
+
+Nmap scan report for 196.223.21.214
+Host is up (0.022s latency).
+All 1000 scanned ports on 196.223.21.214 are closed
+
+Host script results:
+|_targets-traceroute: successfully added 5 new targets.
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT ADDRESS
+-   Hops 1-6 are the same as for 102.215.40.188
+
+Nmap scan report for 102.215.40.2
+Host is up (0.028s latency).
+Not shown: 994 closed ports
+PORT     STATE    SERVICE
+22/tcp   filtered ssh
+1080/tcp filtered socks
+1152/tcp filtered winpoplanmess
+3333/tcp filtered dec-notes
+8654/tcp filtered unknown
+9111/tcp filtered DragonIDSConsole
+
+Host script results:
+|_targets-traceroute: successfully added 7 new targets.
+
+TRACEROUTE (using port 256/tcp)
+HOP RTT ADDRESS
+-   Hops 1-9 are the same as for 102.215.40.188
+
+Nmap done: 9 IP addresses (8 hosts up) scanned in 200.95 seconds
+Segmentation fault
+
+
+
+
+
+
+
+
+sudo nmap --script targets-traceroute --script-args newtargets --traceroute 102.215.40.188/24
+Starting Nmap 7.80 ( https://nmap.org ) at 2023-11-12 19:41 EAT
+Nmap scan report for 102.215.40.1
+Host is up (0.026s latency).
+Not shown: 999 closed ports
+PORT   STATE    SERVICE
+22/tcp filtered ssh
+
+Host script results:
+|_targets-traceroute: successfully added 7 new targets.
+
+TRACEROUTE (using port 554/tcp)
+HOP RTT      ADDRESS
+-   Hops 1-7 are the same as for 102.215.40.9
+8   31.79 ms 102.215.40.1
+
+Nmap scan report for 102.215.40.2
+Host is up (0.10s latency).
+Not shown: 999 closed ports
+PORT   STATE    SERVICE
+22/tcp filtered ssh
+
+Host script results:
+|_targets-traceroute: successfully added 7 new targets.
+
+TRACEROUTE (using port 554/tcp)
+HOP RTT      ADDRESS
+-   Hops 1-7 are the same as for 102.215.40.9
+8   ...
+9   34.44 ms 102.215.40.2
+
+Nmap scan report for 102.215.40.5
+Host is up (0.045s latency).
+Not shown: 999 closed ports
+PORT   STATE    SERVICE
+22/tcp filtered ssh
+
+Host script results:
+|_targets-traceroute: successfully added 7 new targets.
+
+TRACEROUTE (using port 554/tcp)
+HOP RTT      ADDRESS
+1   2.07 ms  _gateway (192.168.1.1)
+2   2.90 ms  192.168.0.1
+3   20.94 ms 196.200.34.1.wananchi.com (196.200.34.1)
+4   19.20 ms 89.2.212.41.in-addr.arpa (41.212.2.89)
+5   25.74 ms 97.5.212.41.in-addr.arpa (41.212.5.97)
+6   30.82 ms 196.223.21.214
+7   19.78 ms 10.100.14.22
+8   34.44 ms 102.215.40.5
+
+Nmap scan report for 102.215.40.6
+Host is up (0.019s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Host script results:
+|_targets-traceroute: successfully added 7 new targets.
+
+TRACEROUTE (using port 554/tcp)
+HOP RTT      ADDRESS
+-   Hops 1-7 are the same as for 102.215.40.5
+8   ...
+9   14.12 ms 102.215.40.6
+
+Nmap scan report for 102.215.40.9
+Host is up (0.088s latency).
+Not shown: 999 closed ports
+PORT   STATE    SERVICE
+22/tcp filtered ssh
+
+Host script results:
+|_targets-traceroute: successfully added 7 new targets.
+
+TRACEROUTE (using port 554/tcp)
+HOP RTT      ADDRESS
+-   Hops 1-6 are the same as for 102.215.40.5
+7   35.74 ms 10.100.14.37
+8   14.06 ms 102.215.40.9
+
+Nmap scan report for 102.215.40.10
+Host is up (0.092s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+
+Host script results:
+|_targets-traceroute: successfully added 7 new targets.
+
+TRACEROUTE (using port 113/tcp)
+HOP RTT      ADDRESS
+-   Hops 1-7 are the same as for 102.215.40.9
+8   ...
+9   36.27 ms 102.215.40.10
+
+Nmap scan report for 102.215.40.11
+Host is up (0.079s latency).
+Not shown: 998 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+443/tcp open   https
+
+Host script results:
+|_targets-traceroute: successfully added 7 new targets.
+
+TRACEROUTE (using port 113/tcp)
+HOP RTT      ADDRESS
+-   Hops 1-7 are the same as for 102.215.40.9
+8   ...
+9   35.26 ms 102.215.40.11
+
+Nmap scan report for 102.215.40.92
+Host is up (0.10s latency).
+All 1000 scanned ports on 102.215.40.92 are closed
+
+Host script results:
+|_targets-traceroute: successfully added 6 new targets.
+
+TRACEROUTE (using port 554/tcp)
+HOP RTT      ADDRESS
+-   Hops 1-6 are the same as for 102.215.40.5
+7   21.62 ms 102.215.40.92
+
+Nmap scan report for 102.215.40.93
+Host is up (0.079s latency).
+Not shown: 998 filtered ports
+PORT     STATE SERVICE
+443/tcp  open  https
+8443/tcp open  https-alt
+
+Host script results:
+|_targets-traceroute: successfully added 7 new targets.
+
+TRACEROUTE (using port 443/tcp)
+HOP RTT      ADDRESS
+-   Hops 1-7 are the same as for 102.215.40.9
+8   24.79 ms 102.215.40.93
+
+Nmap scan report for 102.215.40.129
+Host is up (0.083s latency).
+Not shown: 999 closed ports
+PORT   STATE    SERVICE
+22/tcp filtered ssh
+
+Host script results:
+|_targets-traceroute: successfully added 7 new targets.
+
+TRACEROUTE (using port 554/tcp)
+HOP RTT      ADDRESS
+-   Hops 1-7 are the same as for 102.215.40.9
+8   ...
+9   31.95 ms 102.215.40.129
+
+Nmap scan report for 102.215.40.130
+Host is up (0.073s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+
+Host script results:
+|_targets-traceroute: successfully added 8 new targets.
+
+TRACEROUTE (using port 113/tcp)
+HOP RTT      ADDRESS
+-   Hops 1-9 are the same as for 102.215.40.2
+10  34.38 ms 102.215.40.130
+
+Nmap scan report for 102.215.40.188
+Host is up (0.077s latency).
+Not shown: 997 filtered ports
+PORT     STATE  SERVICE
+113/tcp  closed ident
+443/tcp  open   https
+7443/tcp open   oracleas-https
+
+Host script results:
+|_targets-traceroute: successfully added 8 new targets.
+
+TRACEROUTE (using port 113/tcp)
+HOP RTT      ADDRESS
+-   Hops 1-9 are the same as for 102.215.40.2
+10  16.48 ms 102.215.40.188
+
+Nmap scan report for 102.215.40.193
+Host is up (0.17s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Host script results:
+|_targets-traceroute: successfully added 7 new targets.
+
+TRACEROUTE (using port 554/tcp)
+HOP RTT      ADDRESS
+-   Hops 1-7 are the same as for 102.215.40.5
+8   ...
+9   31.82 ms 102.215.40.193
+
+Nmap scan report for 102.215.40.198
+Host is up (0.077s latency).
+Not shown: 999 filtered ports
+PORT    STATE  SERVICE
+113/tcp closed ident
+
+Host script results:
+|_targets-traceroute: successfully added 8 new targets.
+
+TRACEROUTE (using port 113/tcp)
+HOP RTT      ADDRESS
+-   Hops 1-9 are the same as for 102.215.40.6
+10  19.63 ms 102.215.40.198
+
+Nmap scan report for _gateway (192.168.1.1)
+Host is up (0.017s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE
+80/tcp open  http
+MAC Address: 50:0F:F5:DF:8C:A0 (Tenda Technology,Ltd.Dongguan branch)
+
+TRACEROUTE
+HOP RTT      ADDRESS
+1   17.49 ms _gateway (192.168.1.1)
+
+Nmap scan report for 192.168.0.1
+Host is up (0.012s latency).
+Not shown: 996 filtered ports
+PORT     STATE  SERVICE
+23/tcp   open   telnet
+80/tcp   open   http
+1900/tcp open   upnp
+8080/tcp closed http-proxy
+
+Host script results:
+|_targets-traceroute: successfully added 1 new targets.
+
+TRACEROUTE (using port 8080/tcp)
+HOP RTT ADDRESS
+-   Hops 1-2 are the same as for 102.215.40.2
+
+Nmap scan report for 196.200.34.1.wananchi.com (196.200.34.1)
+Host is up (0.068s latency).
+Not shown: 993 closed ports
+PORT     STATE    SERVICE
+22/tcp   filtered ssh
+23/tcp   filtered telnet
+37/tcp   open     time
+111/tcp  filtered rpcbind
+179/tcp  filtered bgp
+2126/tcp filtered pktcable-cops
+3918/tcp filtered pktcablemmcops
+
+Host script results:
+|_targets-traceroute: successfully added 2 new targets.
+
+TRACEROUTE (using port 554/tcp)
+HOP RTT ADDRESS
+-   Hops 1-3 are the same as for 102.215.40.2
+
+Nmap scan report for 89.2.212.41.in-addr.arpa (41.212.2.89)
+Host is up (0.042s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+23/tcp open  telnet
+
+Host script results:
+|_targets-traceroute: successfully added 3 new targets.
+
+TRACEROUTE (using port 554/tcp)
+HOP RTT ADDRESS
+-   Hops 1-4 are the same as for 102.215.40.2
+
+Nmap scan report for 97.5.212.41.in-addr.arpa (41.212.5.97)
+Host is up (0.053s latency).
+All 1000 scanned ports on 97.5.212.41.in-addr.arpa (41.212.5.97) are filtered
+
+Host script results:
+|_targets-traceroute: successfully added 4 new targets.
+
+TRACEROUTE (using proto 1/icmp)
+HOP RTT ADDRESS
+-   Hops 1-5 are the same as for 102.215.40.2
+
+Nmap scan report for 196.223.21.214
+Host is up (0.12s latency).
+All 1000 scanned ports on 196.223.21.214 are closed
+
+Host script results:
+|_targets-traceroute: successfully added 5 new targets.
+
+TRACEROUTE (using port 554/tcp)
+HOP RTT ADDRESS
+-   Hops 1-6 are the same as for 102.215.40.2
+
+Nmap scan report for 102.215.40.2
+Host is up (0.059s latency).
+Not shown: 999 closed ports
+PORT   STATE    SERVICE
+22/tcp filtered ssh
+
+Host script results:
+|_targets-traceroute: successfully added 7 new targets.
+
+TRACEROUTE (using port 554/tcp)
+HOP RTT      ADDRESS
+1   2.07 ms  _gateway (192.168.1.1)
+2   2.90 ms  192.168.0.1
+3   20.94 ms 196.200.34.1.wananchi.com (196.200.34.1)
+4   19.20 ms 89.2.212.41.in-addr.arpa (41.212.2.89)
+5   25.74 ms 97.5.212.41.in-addr.arpa (41.212.5.97)
+6   30.82 ms 196.223.21.214
+7   35.74 ms 10.100.14.37
+8   ...
+9   34.44 ms 102.215.40.2
+
+Nmap scan report for 102.215.40.6
+Host is up (0.044s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Host script results:
+|_targets-traceroute: successfully added 7 new targets.
+
+TRACEROUTE (using port 554/tcp)
+HOP RTT      ADDRESS
+-   Hops 1-6 are the same as for 102.215.40.2
+7   19.78 ms 10.100.14.22
+8   ...
+9   14.12 ms 102.215.40.6
+10  21.58 ms 102.215.40.6
+
+Nmap done: 266 IP addresses (22 hosts up) scanned in 648.62 seconds
+Segmentation fault
+

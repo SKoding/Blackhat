@@ -1,0 +1,9 @@
+#! /bin/bash
+
+# Trying out scripting
+
+echo "What is your age."
+
+read age
+
+echo "I am $age years old"
