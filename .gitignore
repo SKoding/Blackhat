@@ -168,7 +168,7 @@ cython_debug/
 poetry.toml
 
 # Ignore my data output
-nmap_notes
+nmap_notes.txt
 # ruff
 .ruff_cache/
 
